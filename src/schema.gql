@@ -1,0 +1,29 @@
+# ------------------------------------------------------
+# THIS FILE WAS AUTOMATICALLY GENERATED (DO NOT MODIFY)
+# ------------------------------------------------------
+
+type Cargo {
+  id: Int!
+  nome: String!
+}
+
+type Tripulante {
+  id: Int!
+  nome: String!
+  idade: Float!
+  cargo: Cargo
+}
+
+type Nave {
+  id: Int!
+  nome: String!
+  classe: String!
+  missao: String!
+  capitao: Tripulante!
+  tripulantes: [Tripulante!]!
+}
+
+type Query {
+  naves: [Nave!]!
+  nave(id: Float!): Nave!
+}
